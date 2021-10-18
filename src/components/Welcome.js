@@ -1,12 +1,10 @@
 import React from "react";
-import Logo from "./Logo";
+import Logo from "./images/Logo";
 
 const Welcome = () => {
   return (
-    <div>
+    <div className="welcome-container">
       <Logo />
-      <h1>MERN Authentication</h1>
-      <p>Welcome to my app.</p>
     </div>
   );
 };
