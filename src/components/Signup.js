@@ -28,9 +28,7 @@ const Signup = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // at the beginning of a submit function
-    // make sure password and confirm password are equal
-    // password length >= 8 characters
+    e.preventDefault();
     if (password === confirmPassword && password.length >= 8) {
       const newUser = { name, email, password };
       axios

@@ -1,20 +1,19 @@
-// Imports
 import React, { useEffect, useState } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
-
-// CSS
-import "./App.css";
-
-// Components
-import Signup from "./components/Signup";
-import About from "./components/About";
-import Footer from "./components/Footer";
-import Login from "./components/Login";
 import Navbar from "./components/Navbar";
+import Home from "./components/Welcome";
+import About from "./components/About";
+// import Walker from "./components/pages/walker/WalkerHub";
 import Profile from "./components/Profile";
-import Welcome from "./components/Welcome";
+// import Shelter from "./components/pages/shelter/ShelterHub";
+// import ShelterProfile from "./components/pages/shelter/ShelterProfile";
+import Footer from "./components/Footer";
+// import Dog from "./components/pages/dogs/Dog";
+import Login from "./components/Login";
+
+import "./App.css";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   let token = localStorage.getItem("jwtToken");
@@ -26,7 +25,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
         return token ? (
           <Component {...rest} {...props} />
         ) : (
-          <Redirect to="/login" />
+          <Redirect to="/Login" />
         );
       }}
     />
@@ -34,10 +33,9 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 };
 
 function App() {
-  // Set state values
   const [currentUser, setCurrentUser] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(true);
-
+  console.log(currentUser);
   useEffect(() => {
     let token;
 
@@ -67,34 +65,38 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
-      <div className="container mt-5">
-        <Switch>
-          <Route path="/signup" component={Signup} />
-          <Route
-            path="/login"
-            render={(props) => (
-              <Login
-                {...props}
-                nowCurrentUser={nowCurrentUser}
-                setIsAuthenticated={setIsAuthenticated}
-                user={currentUser}
-              />
-            )}
-          />
-          <PrivateRoute
-            path="/profile"
-            component={Profile}
-            user={currentUser}
-            handleLogout={handleLogout}
-          />
-          <Route exact path="/" component={Welcome} />
-          <Route path="/about" component={About} />
-        </Switch>
-      </div>
+    <>
+      <Navbar
+        currentUser={currentUser}
+        handleLogout={handleLogout}
+        isAuth={isAuthenticated}
+      />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        {/* <Route path="/WalkerHub" component={Walker} /> */}
+        {/* <Route path="/ShelterHub" component={Shelter} /> */}
+        {/* <Route path="/Dogs" exact component={Dog} /> */}
+        <Route path="/about" component={About} />
+        <Route
+          path="/Login"
+          render={(props) => (
+            <Login
+              {...props}
+              nowCurrentUser={nowCurrentUser}
+              setIsAuthenticated={setIsAuthenticated}
+              user={currentUser}
+            />
+          )}
+        />
+        <PrivateRoute
+          path="/Profile"
+          component={Profile}
+          user={currentUser}
+          handleLogout={handleLogout}
+        />
+      </Switch>
       <Footer />
-    </div>
+    </>
   );
 }
 
