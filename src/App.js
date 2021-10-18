@@ -9,7 +9,7 @@ import Automotive from "./components/pages/Automotive";
 import Profile from "./components/Profile";
 import Realstate from "./components/pages/Realstate";
 import Footer from "./components/Footer";
-import Services from "./components/pages/Services";
+import Book from "./components/pages/Book";
 import Login from "./components/Login";
 
 import "./App.css";
@@ -74,7 +74,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/Automotive" component={Automotive} />
         <Route path="/Realstate" component={Realstate} />
-        <Route path="/Services" exact component={Services} />
+        <Route path="/Book" exact component={Book} />
         <Route path="/about" component={About} />
         <Route
           path="/Login"

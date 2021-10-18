@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-// import smallLogo from "./photos/small-logo.png";
+import Headline from "./images/header.svg";
+// import Shutter from "./images/shutter.svg";
+import Shutter from "./images/Shutter";
 
 const Navbar = (props) => {
   console.info(props);
@@ -102,7 +104,10 @@ const NavbarContainer = (props) => {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            {/* <img src={smallLogo} alt="" className="navbar-logo" /> */}
+            <img src={Headline} alt="" className="navbar-logo" />
+            {/* <img src={Shutter} alt="" className="navbar-shutter" /> */}
+            <Shutter />
+
             <i className="fab fa-typo3" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
@@ -111,16 +116,12 @@ const NavbarContainer = (props) => {
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
-                About Us
+                About
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/Services"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Services
+              <Link to="/Book" className="nav-links" onClick={closeMobileMenu}>
+                Contact
               </Link>
             </li>
           </ul>

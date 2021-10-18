@@ -1,7 +1,9 @@
 .welcome-photo {
   width: 100vw;
+  height: 52vw;
 }
 .logo-container {
-  margin-top: -88vw;
-  opacity: 0.6;
+  margin-top: -59vw;
+  margin-left: 16vw;
+  opacity: 1;
 }
