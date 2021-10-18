@@ -8,7 +8,6 @@ import About from "./components/About";
 import Automotive from "./components/pages/Automotive";
 import Profile from "./components/Profile";
 import Realstate from "./components/pages/Realstate";
-// import ShelterProfile from "./components/pages/shelter/ShelterProfile";
 import Footer from "./components/Footer";
 import Services from "./components/pages/Services";
 import Login from "./components/Login";
