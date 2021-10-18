@@ -12,7 +12,7 @@ const Navbar = (props) => {
   const closeMobileMenu = () => setClick(false);
 
   if (isAuth && currentUser) {
-    if (currentUser.volunteer) {
+    if (currentUser) {
       return (
         <>
           <nav className="navbar">
@@ -21,35 +21,10 @@ const Navbar = (props) => {
                 <li className="nav-item">
                   <Link
                     className="nav-links"
-                    to="/WalkerProfile"
+                    to="/Profile"
                     onClick={closeMobileMenu}
                   >
-                    Walker Profile
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <span onClick={handleLogout} className="nav-links">
-                    Logout
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </>
-      );
-    } else {
-      return (
-        <>
-          <nav className="navbar">
-            <div className="navbar-container">
-              <ul className={click ? "nav-menu active" : "nav-menu"}>
-                <li className="nav-item">
-                  <Link
-                    to="/ShelterProfile"
-                    className="nav-links"
-                    onClick={closeMobileMenu}
-                  >
-                    Shelter Profile
+                    Profile
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -72,20 +47,20 @@ const Navbar = (props) => {
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
                 <Link
-                  to="/WalkerHub"
+                  to="/Automotive"
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
-                  Volunteer's Hub
+                  Automotive
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  to="/ShelterHub"
+                  to="/Realstate"
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
-                  Shelter's Hub
+                  Realstate
                 </Link>
               </li>
               <Link to="/Login">
@@ -140,8 +115,12 @@ const NavbarContainer = (props) => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/Dogs" className="nav-links" onClick={closeMobileMenu}>
-                Dogs
+              <Link
+                to="/Services"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Services
               </Link>
             </li>
           </ul>

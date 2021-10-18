@@ -5,12 +5,12 @@ import setAuthToken from "./utils/setAuthToken";
 import Navbar from "./components/Navbar";
 import Home from "./components/Welcome";
 import About from "./components/About";
-// import Walker from "./components/pages/walker/WalkerHub";
+import Automotive from "./components/pages/Automotive";
 import Profile from "./components/Profile";
-// import Shelter from "./components/pages/shelter/ShelterHub";
+import Realstate from "./components/pages/Realstate";
 // import ShelterProfile from "./components/pages/shelter/ShelterProfile";
 import Footer from "./components/Footer";
-// import Dog from "./components/pages/dogs/Dog";
+import Services from "./components/pages/Services";
 import Login from "./components/Login";
 
 import "./App.css";
@@ -73,9 +73,9 @@ function App() {
       />
       <Switch>
         <Route path="/" exact component={Home} />
-        {/* <Route path="/WalkerHub" component={Walker} /> */}
-        {/* <Route path="/ShelterHub" component={Shelter} /> */}
-        {/* <Route path="/Dogs" exact component={Dog} /> */}
+        <Route path="/Automotive" component={Automotive} />
+        <Route path="/Realstate" component={Realstate} />
+        <Route path="/Services" exact component={Services} />
         <Route path="/about" component={About} />
         <Route
           path="/Login"
