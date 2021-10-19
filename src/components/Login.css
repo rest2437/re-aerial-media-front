@@ -1,0 +1,72 @@
+.login-container {
+  height: 55vw;
+  /* border: 2px solid white; */
+  /* background-color: pink; */
+}
+
+.login-form-container {
+  padding-top: 3vw;
+  margin-left: 35%;
+  margin-top: 8%;
+  width: 30vw;
+  height: 30vw;
+  border: 2px solid white;
+  border-radius: 15px;
+  /* background-color: rgb(224, 89, 89); */
+}
+
+.email-form-group {
+  font-size: 1vw;
+}
+
+.password-form-group {
+  font-size: 1vw;
+}
+
+.login-form-control {
+  text-align: center;
+  width: 20vw;
+  height: 2vw;
+  margin-left: 5vw;
+  margin-top: 2vw;
+  font-size: 1vw;
+}
+
+.login-button {
+  font-size: 1vw;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  margin-left: 13.1vw;
+  margin-top: 2vw;
+}
+.signup-button {
+  font-size: 1vw;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  margin-top: 1vw;
+}
+.signup-button:hover,
+.login-button:hover {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.login-title {
+  color: white;
+  margin-top: 1vw;
+  text-align: center;
+  font-size: 2.5vw;
+}
+.signup-div {
+  color: white;
+  margin-top: 2vw;
+
+  text-align: center;
+}

@@ -4,6 +4,8 @@ import axios from "axios";
 import jwt_decode from "jwt-decode";
 import { Redirect } from "react-router-dom";
 import setAuthToken from "../utils/setAuthToken";
+import { Link } from "react-router-dom";
+import "./Login.css";
 
 const { REACT_APP_SERVER_URL } = process.env;
 
@@ -45,36 +47,48 @@ const Login = (props) => {
   if (props.user) return <Redirect to="/profile" />; // double check
 
   return (
-    <div className="row mt-4">
-      <div className="col-md-7 offset-md-3">
-        <div className="card card-body">
-          <h2 className="py-2">Login</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                value={email}
-                onChange={handleEmail}
-                className="form-control"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                name="password"
-                value={password}
-                onChange={handlePassword}
-                className="form-control"
-              />
-            </div>
-            <button type="submit" className="btn btn-primary float-right">
-              Submit
-            </button>
-          </form>
-        </div>
+    <div className="login-container">
+      <div className="login-form-container">
+        <h2 className="login-title">Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="email-form-group">
+            {/* <label id="email-label" htmlFor="email">
+              Email
+            </label> */}
+            <input
+              placeholder="EMAIL"
+              type="email"
+              name="email"
+              value={email}
+              onChange={handleEmail}
+              className="login-form-control"
+            />
+          </div>
+          <div className="password-form-group">
+            {/* <label id="password-label" htmlFor="password">
+              Password
+            </label> */}
+            <input
+              placeholder="PASSWORD"
+              type="password"
+              name="password"
+              value={password}
+              onChange={handlePassword}
+              className="login-form-control"
+            />
+          </div>
+          <button type="submit" className="login-button">
+            Submit
+          </button>
+          <div className="signup-div">
+            <p>Dont have an account yet?</p>
+            <Link to="./Signup">
+              <button type="submit" className="signup-button">
+                Signup!
+              </button>
+            </Link>
+          </div>
+        </form>
       </div>
     </div>
   );

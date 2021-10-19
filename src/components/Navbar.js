@@ -22,6 +22,24 @@ const Navbar = (props) => {
               <ul className={click ? "nav-menu active" : "nav-menu"}>
                 <li className="nav-item">
                   <Link
+                    to="/Automotive"
+                    className="nav-links"
+                    onClick={closeMobileMenu}
+                  >
+                    Automotive
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/Realstate"
+                    className="nav-links"
+                    onClick={closeMobileMenu}
+                  >
+                    Realstate
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
                     className="nav-links"
                     to="/Profile"
                     onClick={closeMobileMenu}
