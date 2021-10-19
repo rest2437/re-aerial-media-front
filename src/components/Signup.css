@@ -1,10 +1,14 @@
 .signup-container {
   height: 55vw;
+  background-image: url(./images/smoke.jpeg);
+  background-size: cover;
+
   /* border: 2px solid white; */
   /* background-color: pink; */
 }
-
-.signup-form-container {
+#signup-form {
+}
+#signup-form-container {
   padding-top: 3vw;
   margin-left: 35%;
   margin-top: 8%;
@@ -12,7 +16,7 @@
   height: 30vw;
   border: 2px solid white;
   border-radius: 15px;
-  /* background-color: rgb(224, 89, 89); */
+  background-color: rgba(0, 0, 0, 0.151);
 }
 
 .email-form-group {
@@ -53,4 +57,8 @@
   margin-top: 1vw;
   text-align: center;
   font-size: 2.5vw;
+}
+.smoke {
+  margin-top: -10vw;
+  width: 100vw;
 }
