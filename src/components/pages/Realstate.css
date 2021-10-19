@@ -13,7 +13,7 @@
   margin-top: 1vw;
   margin-left: 10vw;
 }
-#Real1 {
+#Real9 {
   margin-top: -20vw;
   margin-left: 46vw;
   width: 45rem;
@@ -27,11 +27,38 @@
 #Real6,
 #Real7,
 #Real8,
-#Real9,
+#Real1,
 #Real10 {
   border-radius: 15%;
   padding: 2vw;
   width: 30rem;
+}
+#Real2:hover,
+#Real3:hover,
+#Real4:hover,
+#Real5:hover,
+#Real6:hover,
+#Real7:hover,
+#Real8:hover,
+#Real1:hover,
+#Real10:hover {
+  cursor: zoom-in;
+}
+
+#Real2:active,
+#Real3:active,
+#Real4:active,
+#Real5:active,
+#Real6:active,
+#Real7:active,
+#Real8:active,
+#Real1:active,
+#Real10:active {
+  transform: scale(1.5);
+  border-radius: 15%;
+  border: 2px solid white;
+  background-color: white;
+  padding: 0;
 }
 
 .realstate-photo-container {

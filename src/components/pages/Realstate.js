@@ -29,7 +29,7 @@ function Realstate() {
         </h2>
       </div>
       <div>
-        <img src={Real1} alt="" id="Real1" />
+        <img src={Real9} alt="" id="Real9" />
       </div>
 
       <div className="realstate-photo-container">
@@ -55,7 +55,7 @@ function Realstate() {
           <img src={Real8} alt="" id="Real8" />
         </div>
         <div>
-          <img src={Real9} alt="" id="Real9" />
+          <img src={Real1} alt="" id="Real1" />
         </div>
         <div>
           <img src={Real10} alt="" id="Real10" />
