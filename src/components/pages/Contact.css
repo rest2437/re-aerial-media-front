@@ -1,5 +1,5 @@
 #form-container {
-  background-color: rgba(255, 255, 255, 0.616);
+  /* background-color: rgba(255, 255, 255, 0.616); */
   border-radius: 15px;
   margin-top: 3vw;
   margin-left: 18vw;
@@ -16,28 +16,38 @@
   color: white;
 }
 #contact-label {
+  text-align: center;
   color: white;
 }
 
 #contact-form {
   width: 30vw;
   height: 30vw;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   text-align: center;
   margin-left: 30vw;
-  margin-top: 2vw;
+  margin-top: -1vw;
   padding: 4vw;
 }
 
 #contact-name {
+  border-radius: 10px;
+  text-align: center;
   font-size: 1.5vw;
 }
 #contact-email {
+  border-radius: 10px;
+  text-align: center;
   font-size: 1.5vw;
 }
 
 #contact-message {
-  font-size: 1.5vw;
+  border-radius: 10px;
+  text-align: center;
+  height: 10vw;
+  width: 25vw;
+  font-size: 1vw;
+  margin-left: -2.5vw;
 }
 
 .contact-name-div {
@@ -55,11 +65,28 @@
   width: 30.03vw;
 }
 #form-title {
+  text-align: center;
+  font-size: 0.75vw;
   margin-top: -40vw;
-  margin-left: 32.5vw;
+  margin-left: 30vw;
   color: white;
 }
 .city {
   margin-top: -20vw;
   height: 56vw;
+}
+#contact-sub {
+  font-size: 1vw;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+#contact-sub:hover {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }

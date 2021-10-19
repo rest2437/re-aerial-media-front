@@ -44,14 +44,19 @@ const Contact = () => {
           <img src={Peytan} alt="" className="peytan" />
 
           <div id="form-title">
-            <h1>Contact us for your quote today!</h1>
+            <h1>
+              We're happy to see that you think our work is as epic as we do. If
+              you want to book us or have any questions please contact us today
+              and explain what your project questions or goals are!
+            </h1>
           </div>
           <form id="contact-form" onSubmit={handleSubmit}>
             <div className="contact-name-div">
-              <label id="contact-label" htmlFor="name">
+              {/* <label id="contact-label" htmlFor="name">
                 Name:
-              </label>
+              </label> */}
               <input
+                placeholder="NAME"
                 value={name}
                 onChange={handleName}
                 type="text"
@@ -60,10 +65,11 @@ const Contact = () => {
               />
             </div>
             <div className="contact-email-div">
-              <label id="contact-label" htmlFor="email">
+              {/* <label id="contact-label" htmlFor="email">
                 Email:
-              </label>
+              </label> */}
               <input
+                placeholder="EMAIL@EMAIL.COM"
                 value={email}
                 onChange={handleEmail}
                 type="email"
@@ -72,17 +78,20 @@ const Contact = () => {
               />
             </div>
             <div className="contact-message-div">
-              <label id="contact-label" htmlFor="message">
+              {/* <label id="contact-label" htmlFor="message">
                 Message:
-              </label>
+              </label> */}
               <textarea
+                placeholder="PLEASE WRITE MESSAGE HERE"
                 value={message}
                 onChange={handleMessage}
                 id="contact-message"
                 required
               />
             </div>
-            <button type="submit">{status}</button>
+            <button id="contact-sub" type="submit">
+              {status}
+            </button>
           </form>
         </div>
       </div>

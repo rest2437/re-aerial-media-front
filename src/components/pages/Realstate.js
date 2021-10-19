@@ -25,7 +25,12 @@ function Realstate() {
           And lets not forget... its pretty cool to see photos of anything from
           a birds eye view. While your competition only has ground photos, you
           can stand out by having unique photos of the entire property, or that
-          nice view of the front of the house from 20-30ft above the street.
+          nice view of the front of the house from 20-30ft above the street. We
+          know during this pandemic selling homes can be a struggle. Not many
+          clients want to view a home in person or buy a home sight unseen which
+          makes it difficult to show all the goodies inside of the home... WE
+          have a fix for that! RE Aerial Media is now offering complete 360
+          walkthough's!
         </h2>
       </div>
       <div>
