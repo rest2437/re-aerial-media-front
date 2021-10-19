@@ -1,8 +1,46 @@
 .realstate-container {
   width: 900px;
-  height: 1000px;
 }
 
 #realstate-header {
+  margin-top: 5vw;
+  margin-left: 10vw;
   color: white;
+}
+#realstate-disc {
+  color: white;
+  width: 32vw;
+  margin-top: 1vw;
+  margin-left: 10vw;
+}
+#Real1 {
+  margin-top: -20vw;
+  margin-left: 46vw;
+  width: 45rem;
+  border-radius: 2%;
+}
+
+#Real2,
+#Real3,
+#Real4,
+#Real5,
+#Real6,
+#Real7,
+#Real8,
+#Real9,
+#Real10 {
+  border-radius: 15%;
+  padding: 2vw;
+  width: 30rem;
+}
+
+.realstate-photo-container {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  margin-left: 8vw;
+  width: 90vw;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
