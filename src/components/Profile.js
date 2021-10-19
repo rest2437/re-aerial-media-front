@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Profile.css";
 
 const Profile = (props) => {
   const { handleLogout, user } = props;
@@ -14,7 +15,7 @@ const Profile = (props) => {
   }
 
   const userData = user ? (
-    <div>
+    <div id="profile-container">
       <h1>Profile</h1>
       <p>Name: {name}</p>
       <p>Email: {email}</p>

@@ -1,0 +1,65 @@
+#form-container {
+  background-color: rgba(255, 255, 255, 0.616);
+  border-radius: 15px;
+  margin-top: 3vw;
+  margin-left: 18vw;
+  border: 2px solid white;
+  height: 43vw;
+  width: 60vw;
+}
+.contact-container {
+  width: 900px;
+  height: 1000px;
+}
+
+#contact-header {
+  color: white;
+}
+#contact-label {
+  color: white;
+}
+
+#contact-form {
+  width: 30vw;
+  height: 30vw;
+  border: 2px solid white;
+  text-align: center;
+  margin-left: 30vw;
+  margin-top: 2vw;
+  padding: 4vw;
+}
+
+#contact-name {
+  font-size: 1.5vw;
+}
+#contact-email {
+  font-size: 1.5vw;
+}
+
+#contact-message {
+  font-size: 1.5vw;
+}
+
+.contact-name-div {
+  padding: 1vw;
+}
+.contact-email-div {
+  padding: 1vw;
+}
+
+.contact-message-div {
+  padding: 1vw;
+}
+.peytan {
+  border-radius: 15px 0 0 15px;
+  width: 30.03vw;
+}
+#form-title {
+  margin-top: -40vw;
+  margin-left: 32.5vw;
+  color: white;
+}
+.city {
+  margin-top: -20vw;
+  height: 56vw;
+}

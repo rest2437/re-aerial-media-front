@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1.3vw;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -34,7 +34,7 @@
 }
 .fa-typo3 {
   margin-left: 0.5rem;
-  width: 10rem;
+  width: 15vw;
 }
 
 .nav-menu {
@@ -48,12 +48,29 @@
   margin-right: 2rem;
 }
 
+.nav-item-contact {
+  display: flex;
+  justify-content: flex-end;
+  height: 80px;
+  margin-right: -3vw;
+  margin-left: 1vw;
+}
+
+.nav-item-about {
+  display: flex;
+  justify-content: flex-end;
+  height: 80px;
+  margin-right: -1vw;
+  margin-left: 1vw;
+}
+
 .nav-item {
   display: flex;
   justify-content: flex-end;
   height: 80px;
+  margin-right: 1vw;
+  margin-left: 1vw;
 }
-
 .nav-links {
   cursor: pointer;
   color: #fff;

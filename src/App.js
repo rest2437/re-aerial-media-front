@@ -9,8 +9,9 @@ import Automotive from "./components/pages/Automotive";
 import Profile from "./components/Profile";
 import Realstate from "./components/pages/Realstate";
 import Footer from "./components/Footer";
-import Book from "./components/pages/Book";
+import Contact from "./components/pages/Contact";
 import Login from "./components/Login";
+import Signup from "./components/Signup";
 
 import "./App.css";
 
@@ -65,36 +66,40 @@ function App() {
 
   return (
     <>
-      <Navbar
-        currentUser={currentUser}
-        handleLogout={handleLogout}
-        isAuth={isAuthenticated}
-      />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/Automotive" component={Automotive} />
-        <Route path="/Realstate" component={Realstate} />
-        <Route path="/Book" exact component={Book} />
-        <Route path="/about" component={About} />
-        <Route
-          path="/Login"
-          render={(props) => (
-            <Login
-              {...props}
-              nowCurrentUser={nowCurrentUser}
-              setIsAuthenticated={setIsAuthenticated}
-              user={currentUser}
-            />
-          )}
-        />
-        <PrivateRoute
-          path="/Profile"
-          component={Profile}
-          user={currentUser}
+      <div className="app-body">
+        <Navbar
+          currentUser={currentUser}
           handleLogout={handleLogout}
+          isAuth={isAuthenticated}
         />
-      </Switch>
-      <Footer />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/Signup" exact component={Signup} />
+
+          <Route path="/Automotive" component={Automotive} />
+          <Route path="/Realstate" component={Realstate} />
+          <Route path="/Contact" exact component={Contact} />
+          <Route path="/About" component={About} />
+          <Route
+            path="/Login"
+            render={(props) => (
+              <Login
+                {...props}
+                nowCurrentUser={nowCurrentUser}
+                setIsAuthenticated={setIsAuthenticated}
+                user={currentUser}
+              />
+            )}
+          />
+          <PrivateRoute
+            path="/Profile"
+            component={Profile}
+            user={currentUser}
+            handleLogout={handleLogout}
+          />
+        </Switch>
+        <Footer />
+      </div>
     </>
   );
 }
