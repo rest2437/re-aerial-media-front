@@ -1,0 +1,68 @@
+.about-container {
+  height: 60vw;
+  background-image: url(./images/Lotus.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about-text-container {
+  width: 50vw;
+  height: 60vw;
+  background-color: black;
+}
+
+.about-title {
+  margin-top: 4vw;
+  color: white;
+  text-align: center;
+}
+.about-sub-title {
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+  color: white;
+  text-align: center;
+}
+.automotive-sub-title {
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+  color: black;
+  text-align: center;
+}
+
+.about-content {
+  width: 40vw;
+  margin-left: 5vw;
+  font-size: 1vw;
+  color: white;
+  text-align: center;
+}
+.automotive-services {
+  width: 25vw;
+  height: 30vw;
+  /* border: 2px solid white; */
+  background-color: white;
+}
+.realstate-services {
+  width: 25vw;
+  height: 30vw;
+  /* border: 2px solid white; */
+  background-color: black;
+}
+
+.parent {
+  margin-top: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.automotive-about-content {
+  /* width: 40vw; */
+  font-size: 0.8vw;
+  color: black;
+  text-align: center;
+}
+.realstate-about-content {
+  /* width: 40vw; */
+  font-size: 0.8vw;
+  color: white;
+  text-align: center;
+}
