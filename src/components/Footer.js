@@ -32,6 +32,7 @@ function Footer() {
           <div className="footer-link-items">
             <h2>About Us</h2>
             <Link to="/about">About us</Link>
+            <Link to="/testimonials">Testimonials</Link>
           </div>
           <div className="footer-link-items">
             <h2>Contact Us</h2>

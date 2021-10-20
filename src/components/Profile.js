@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Update from "./Update";
 import "./Profile.css";
 
 const Profile = (props) => {
-  const { handleLogout, user } = props;
+  const { handleLogout, user, updateUser } = props;
   const { id, name, email, exp } = user;
   const expirationTime = new Date(exp * 1000);
   let currentTime = Date.now();
@@ -20,6 +21,7 @@ const Profile = (props) => {
       <p>Name: {name}</p>
       <p>Email: {email}</p>
       <p>ID: {id}</p>
+      <Update id={id} name={name} email={email} updateUser={updateUser} />
     </div>
   ) : (
     <h2>Loading...</h2>

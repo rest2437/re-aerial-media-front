@@ -12,8 +12,12 @@ import Footer from "./components/Footer";
 import Contact from "./components/pages/Contact";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Testimonials from "./components/pages/Testimonials";
+import axios from "axios";
 
 import "./App.css";
+
+const { REACT_APP_SERVER_URL } = process.env;
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   let token = localStorage.getItem("jwtToken");
@@ -63,6 +67,24 @@ function App() {
       setIsAuthenticated(false);
     }
   };
+  const updateUser = (e) => {
+    axios
+      .get(`${REACT_APP_SERVER_URL}/users/token`)
+      .then((response) => {
+        const { token } = response.data;
+        // save token to localStorage
+        localStorage.setItem("jwtToken", token);
+        // set token to headers
+        setAuthToken(token);
+        // decode token to get the user data
+        // const decoded = jwt_decode(token);
+        // // set the current user
+        // props.nowCurrentUser(decoded); // function passed down as props.
+      })
+      .catch((error) => {
+        console.log("===> Error on login", error);
+      });
+  };
 
   return (
     <>
@@ -75,11 +97,12 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/Signup" exact component={Signup} />
-
           <Route path="/Automotive" component={Automotive} />
           <Route path="/Realstate" component={Realstate} />
           <Route path="/Contact" exact component={Contact} />
           <Route path="/About" component={About} />
+          <Route path="/Testimonials" component={Testimonials} />
+
           <Route
             path="/Login"
             render={(props) => (
@@ -96,6 +119,7 @@ function App() {
             component={Profile}
             user={currentUser}
             handleLogout={handleLogout}
+            updateUser={updateUser}
           />
         </Switch>
         <Footer />
