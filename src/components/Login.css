@@ -42,7 +42,7 @@
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0);
   color: white;
-  margin-left: 13.1vw;
+  margin-left: 11vw;
   margin-top: 2vw;
 }
 .signup-button {
@@ -53,6 +53,7 @@
   background-color: rgba(0, 0, 0, 0);
   color: white;
   margin-top: 1vw;
+  margin-left: 0.2vw;
 }
 .signup-button:hover,
 .login-button:hover {
