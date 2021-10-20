@@ -9,36 +9,6 @@ const svgVariants = {
   },
 };
 
-const pathVariants = {
-  hidden: {
-    opacity: 0,
-    pathLength: 0,
-  },
-  visible: {
-    opacity: 1,
-    pathLength: 1,
-    transition: {
-      duration: 4,
-      ease: "easeInOut",
-    },
-  },
-};
-
-const pathVariantsTwo = {
-  hidden: {
-    opacity: 0,
-    pathLength: 0,
-  },
-  visible: {
-    opacity: 1,
-    pathLength: 1,
-    transition: {
-      duration: 3,
-      ease: "easeInOut",
-    },
-  },
-};
-
 function Shutter() {
   return (
     <div className="shutter-logo">

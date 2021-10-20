@@ -29,7 +29,7 @@ const About = () => {
         </div>
         <div className="parent">
           <div className="realstate-services">
-            <div className="about-sub-title">
+            <div className="realstate-about-sub-title">
               <p>
                 <h2>Realstate Services </h2>
               </p>
@@ -38,14 +38,16 @@ const About = () => {
               <p>
                 <ul>
                   <li>
-                    <h2>Basic Package</h2>
+                    <h2 className="realstate-title-services">Basic Package</h2>
                   </li>
                   <ul>
                     <li>Aerial Photo Portfolio</li>
                     <li>Photo Editing</li>
                   </ul>
                   <li>
-                    <h2>Intermediate Package</h2>
+                    <h2 className="realstate-title-services">
+                      Intermediate Package
+                    </h2>
                   </li>
                   <ul>
                     <li>Aerial photo Portfolio</li>
@@ -53,7 +55,9 @@ const About = () => {
                     <li>Photo Editing</li>
                   </ul>
                   <li>
-                    <h2>Advanced Package</h2>
+                    <h2 className="realstate-title-services">
+                      Advanced Package
+                    </h2>
                   </li>
                   <ul>
                     <li>Aerial photo Portfolio</li>
@@ -62,7 +66,7 @@ const About = () => {
                     <li>360 Interior Walkthrough With Your Own Link</li>
                   </ul>
                   <li>
-                    <h2>Elite package</h2>
+                    <h2 className="realstate-title-services">Elite package</h2>
                   </li>
                   <ul>
                     <li>Aerial photo Portfolio</li>
