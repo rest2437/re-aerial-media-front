@@ -1,5 +1,7 @@
 import axios from "axios";
 import React from "react";
+import "../Profile.css";
+
 const { REACT_APP_SERVER_URL } = process.env;
 
 const TestimonialsContainer = (props) => {
@@ -18,7 +20,9 @@ const TestimonialsContainer = (props) => {
     <div className="each-post">
       <h2 id="name-of-test">{props.name}</h2>
       <p>{props.content}</p>
-      <button onClick={handleSubmit}>Delete</button>
+      <button id="test-form-button" onClick={handleSubmit}>
+        Delete
+      </button>
     </div>
   );
 };
