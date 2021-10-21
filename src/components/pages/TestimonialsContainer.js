@@ -2,8 +2,8 @@ import React from "react";
 
 const TestimonialsContainer = (props) => {
   return (
-    <div className="testimonials-container">
-      <h2>{props.name}</h2>
+    <div className="each-post">
+      <h2 id="name-of-test">{props.name}</h2>
       <p>{props.content}</p>
     </div>
   );

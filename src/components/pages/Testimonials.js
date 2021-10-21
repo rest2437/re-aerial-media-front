@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import NewTestimonial from "./NewTestimonial";
 import TestimonialsContainer from "./TestimonialsContainer";
 import "./Testimonials.css";
-// import DogsContainer from "./DogsContainer";
-// import "./Dog.css";
-// import video from "../../videos/dogpage.mp4";
 
 const { REACT_APP_SERVER_URL } = process.env;
 
@@ -24,8 +20,8 @@ const Testimonials = () => {
   const allTestimonials = () => {
     return testimonials.map((e, i) => {
       return (
-        <div>
-          <div className="each-post">
+        <div className="test-data-container">
+          <div>
             <TestimonialsContainer
               key={i}
               _id={e._id}
@@ -44,15 +40,11 @@ const Testimonials = () => {
   );
 
   return (
-    <div className="testimonials-container">
-      <NewTestimonial />
-      {/* <div>
-        <video src={video} className="dog-page-video" autoPlay loop muted />
+    <div>
+      <div className="testimonials-container">
+        <div id="stuff">Testimonials</div>
+        <div className="testimonials-div">{displayTestimonialsList}</div>
       </div>
-      <div className="dogs-page-header">
-        <h2 id="dog-page-title">All Shelter Dogs Ready To Go!</h2>
-      </div> */}
-      <div className="testimonials-div">{displayTestimonialsList}</div>
     </div>
   );
 };

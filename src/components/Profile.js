@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Update from "./Update";
 import "./Profile.css";
+import NewTestimonial from "../components/pages/NewTestimonial";
+import Logo from "../components/images/logo.svg";
 
 const Profile = (props) => {
   const { handleLogout, user, updateUser } = props;
@@ -17,11 +19,21 @@ const Profile = (props) => {
 
   const userData = user ? (
     <div id="profile-container">
-      <h1>Profile</h1>
-      <p>Name: {name}</p>
-      <p>Email: {email}</p>
-      <p>ID: {id}</p>
-      <Update id={id} name={name} email={email} updateUser={updateUser} />
+      <div className="profile-info-div">
+        <h1>Your Info</h1>
+        <p>Name: {name}</p>
+        <p>Email: {email}</p>
+        <p>ID: {id}</p>
+      </div>
+      <div id="profile-update-div">
+        <Update id={id} name={name} email={email} updateUser={updateUser} />
+      </div>
+      <div id="profile-test-div">
+        <NewTestimonial />
+      </div>
+      <div id="profile-logo">
+        <img src={Logo} alt="" className="logo" />
+      </div>
     </div>
   ) : (
     <h2>Loading...</h2>

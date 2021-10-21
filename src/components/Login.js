@@ -29,14 +29,10 @@ const Login = (props) => {
       .post(`${REACT_APP_SERVER_URL}/users/login`, userData)
       .then((response) => {
         const { token } = response.data;
-        // save token to localStorage
         localStorage.setItem("jwtToken", token);
-        // set token to headers
         setAuthToken(token);
-        // decode token to get the user data
         const decoded = jwt_decode(token);
-        // set the current user
-        props.nowCurrentUser(decoded); // function passed down as props.
+        props.nowCurrentUser(decoded);
       })
       .catch((error) => {
         console.log("===> Error on login", error);

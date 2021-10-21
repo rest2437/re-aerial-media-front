@@ -1,10 +1,6 @@
 // Imports
 import React, { useState } from "react";
 import axios from "axios";
-// import jwt_decode from "jwt-decode";
-// import { Redirect } from "react-router-dom";
-// import setAuthToken from "../utils/setAuthToken";
-// import { Link } from "react-router-dom";
 import "./Login.css";
 
 const { REACT_APP_SERVER_URL } = process.env;
@@ -50,7 +46,7 @@ const Update = (props) => {
           value={name}
           onChange={handleName}
           name="firstName"
-          className="profile-input"
+          className="edit-input-name"
         />
         <br />
         <input
@@ -58,15 +54,20 @@ const Update = (props) => {
           value={email}
           onChange={handleEmail}
           name="lastName"
-          className="profile-input"
+          className="edit-input-email"
         />
-
-        <button type="submit" value="Save changes" className="btn">
-          Submit
-        </button>
-        <button onClick={refreshPage} value="Save changes" className="btn">
-          Refresh
-        </button>
+        <div className="button-container">
+          <button type="submit" value="Save changes" className="submit-button">
+            Submit
+          </button>
+          <button
+            onClick={refreshPage}
+            value="Save changes"
+            className="refresh-button"
+          >
+            Refresh
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -1,4 +1,40 @@
 .testimonials-container {
-  height: 900px;
+  margin-left: 0vw;
   color: white;
+}
+.test-data-container {
+}
+
+.test-container {
+}
+.review-text {
+}
+
+.test-name-form-control {
+}
+.test-text-group {
+}
+.test-text-form-control {
+}
+#test-form-button {
+}
+.each-post {
+  border-radius: 20px;
+  width: 40vw;
+  margin-left: 27vw;
+  margin-bottom: 5vw;
+  border: 2px solid white;
+  /* background-color: blue; */
+  text-align: center;
+  padding: 20px;
+}
+#name-of-test {
+  margin-bottom: 1vw;
+}
+#stuff {
+  margin-left: 41.5vw;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+  color: white;
+  font-size: 2vw;
 }

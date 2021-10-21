@@ -33,43 +33,32 @@ const NewTestimonial = () => {
   if (redirect) return <Redirect to="/Testimonials" />; // You can have them redirected to profile (your choice)
 
   return (
-    <div className="add-a-dog">
-      <div className="row mt-4">
-        <div className="col-md-7 offset-md-3">
-          <div className="card card-body">
-            <h2 className="py-2">Add a Review</h2>
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label className="profile-form-label" htmlFor="name">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={name}
-                  onChange={handleName}
-                  className="profile-form-control"
-                />
-              </div>
-              <div className="form-group">
-                {/* <label className="profile-form-label" htmlFor="breed">
-                  Review
-                </label> */}
-                <textarea
-                  placeholder="PLEASE WRITE MESSAGE HERE"
-                  value={content}
-                  onChange={handleContent}
-                  id="contact-message"
-                  required
-                />
-              </div>
-              <button id="profile-form-button" type="submit" className="">
-                Submit
-              </button>
-            </form>
-          </div>
+    <div className="test-container">
+      <h2 className="review-title">Add a Review</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="test-name-group">
+          <input
+            placeholder="NAME"
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleName}
+            className="test-name-form-control"
+          />
         </div>
-      </div>
+        <div className="test-text-group">
+          <textarea
+            placeholder="PLEASE WRITE MESSAGE HERE"
+            value={content}
+            onChange={handleContent}
+            required
+            className="test-text-form-control"
+          />
+        </div>
+        <button id="test-form-button" type="submit" className="">
+          Submit
+        </button>
+      </form>
     </div>
   );
 };
