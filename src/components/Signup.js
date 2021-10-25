@@ -1,9 +1,7 @@
-// Imports
 import React, { useState } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import "./Signup.css";
-// import Smoke from "./images/smoke.jpeg";
 const { REACT_APP_SERVER_URL } = process.env;
 
 const Signup = () => {
@@ -47,17 +45,15 @@ const Signup = () => {
     }
   };
 
-  if (redirect) return <Redirect to="/login" />; // You can have them redirected to profile (your choice)
+  if (redirect) return <Redirect to="/login" />;
 
   return (
     <div>
       <div className="signup-container">
-        {/* <img src={Smoke} alt="" className="smoke" /> */}
         <div id="signup-form-container">
           <h2 className="signup-title">Signup</h2>
           <form id="signup-form" onSubmit={handleSubmit}>
             <div className="email-form-group">
-              {/* <label htmlFor="name">Name</label> */}
               <input
                 placeholder="NAME"
                 type="text"
@@ -68,7 +64,6 @@ const Signup = () => {
               />
             </div>
             <div className="email-form-group">
-              {/* <label htmlFor="email">Email</label> */}
               <input
                 placeholder="EMAIL"
                 type="email"
@@ -79,7 +74,6 @@ const Signup = () => {
               />
             </div>
             <div className="password-form-group">
-              {/* <label htmlFor="password">Password</label> */}
               <input
                 placeholder="PASSWORD"
                 type="password"
@@ -90,7 +84,6 @@ const Signup = () => {
               />
             </div>
             <div className="password-form-group">
-              {/* <label htmlFor="confirmPassword">Confirm Password</label> */}
               <input
                 placeholder="CONFIRM PASSWORD"
                 type="password"

@@ -40,7 +40,7 @@ const Login = (props) => {
       });
   };
 
-  if (props.user) return <Redirect to="/profile" />; // double check
+  if (props.user) return <Redirect to="/profile" />;
 
   return (
     <div className="login-container">
@@ -48,9 +48,6 @@ const Login = (props) => {
         <h2 className="login-title">Login</h2>
         <form onSubmit={handleSubmit}>
           <div className="email-form-group">
-            {/* <label id="email-label" htmlFor="email">
-              Email
-            </label> */}
             <input
               placeholder="EMAIL"
               type="email"
@@ -61,9 +58,6 @@ const Login = (props) => {
             />
           </div>
           <div className="password-form-group">
-            {/* <label id="password-label" htmlFor="password">
-              Password
-            </label> */}
             <input
               placeholder="PASSWORD"
               type="password"

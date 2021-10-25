@@ -3,7 +3,6 @@ import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Headline from "./images/header.svg";
-// import Shutter from "./images/shutter.svg";
 import Shutter from "./images/Shutter";
 
 const Navbar = (props) => {
@@ -59,7 +58,6 @@ const Navbar = (props) => {
       );
     }
   } else {
-    // Not logged in and isAuth is false
     return (
       <>
         <nav className="navbar">
@@ -123,7 +121,6 @@ const NavbarContainer = (props) => {
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             <img src={Headline} alt="" className="navbar-logo" />
-            {/* <img src={Shutter} alt="" className="navbar-shutter" /> */}
             <Shutter />
 
             <i className="fab fa-typo3" />
@@ -153,9 +150,6 @@ const NavbarContainer = (props) => {
             handleLogout={handleLogout}
             closeMobileMenu={closeMobileMenu}
           />
-          {/* <Link to="/Login">
-            {button && <Button buttonStyle="btn--outline">SIGN-IN</Button>}
-          </Link> */}
         </div>
       </nav>
     </>

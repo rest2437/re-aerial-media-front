@@ -61,7 +61,6 @@ function App() {
 
   const handleLogout = () => {
     if (localStorage.getItem("jwtToken")) {
-      // remove token for localStorage
       localStorage.removeItem("jwtToken");
       setCurrentUser(null);
       setIsAuthenticated(false);
@@ -72,14 +71,8 @@ function App() {
       .get(`${REACT_APP_SERVER_URL}/users/token`)
       .then((response) => {
         const { token } = response.data;
-        // save token to localStorage
         localStorage.setItem("jwtToken", token);
-        // set token to headers
         setAuthToken(token);
-        // decode token to get the user data
-        // const decoded = jwt_decode(token);
-        // // set the current user
-        // props.nowCurrentUser(decoded); // function passed down as props.
       })
       .catch((error) => {
         console.log("===> Error on login", error);

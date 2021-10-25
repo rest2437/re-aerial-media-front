@@ -1,6 +1,5 @@
 #profile-container {
   color: white;
-  /* border: 2px solid pink; */
   width: 75%;
   height: 100%;
   margin-left: 11vw;
@@ -11,7 +10,6 @@
   width: 20vw;
   margin-left: 1vw;
   margin-top: 2vw;
-  /* background-color: green; */
 }
 #profile-update-div {
   width: 20vw;
@@ -19,7 +17,6 @@
   text-align: center;
   margin-left: 27vw;
   margin-top: -7vw;
-  /* background-color: pink; */
 }
 
 #profile-test-div {
@@ -27,7 +24,6 @@
   text-align: center;
   margin-left: 53vw;
   margin-top: -10vw;
-  /* background-color: aqua; */
 }
 #profile-logo {
   margin-top: 5vw;

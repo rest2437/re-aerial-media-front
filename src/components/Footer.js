@@ -2,8 +2,6 @@ import React from "react";
 import "./Footer.css";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
-// import smallLogo from "./photos/small-logo.png";
-// import teamName from "./photos/team.png";
 
 function Footer() {
   return (
@@ -59,12 +57,10 @@ function Footer() {
         <div className="social-media-wrap">
           <div className="footer-logo">
             <Link to="/" className="social-logo">
-              {/* <img src={smallLogo} alt="" className="fab fa-typo3" /> */}
               <i className="fab fa-typo3" />
             </Link>
           </div>
           <small className="website-rights">RE Aerial Media SEI802 2021</small>
-          {/* <img src={teamName} alt="" className="fab fa-typo3" /> */}
           <div className="social-icons">
             <Link
               className="social-icon-link facebook"

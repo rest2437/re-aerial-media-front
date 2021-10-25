@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import Peytan from "../images/peytan.jpg";
-// import City from "../images/city.mp4";
 
 const Contact = () => {
   const [status, setStatus] = useState("Submit");
@@ -52,9 +51,6 @@ const Contact = () => {
           </div>
           <form id="contact-form" onSubmit={handleSubmit}>
             <div className="contact-name-div">
-              {/* <label id="contact-label" htmlFor="name">
-                Name:
-              </label> */}
               <input
                 placeholder="NAME"
                 value={name}
@@ -65,9 +61,6 @@ const Contact = () => {
               />
             </div>
             <div className="contact-email-div">
-              {/* <label id="contact-label" htmlFor="email">
-                Email:
-              </label> */}
               <input
                 placeholder="EMAIL@EMAIL.COM"
                 value={email}
@@ -78,9 +71,6 @@ const Contact = () => {
               />
             </div>
             <div className="contact-message-div">
-              {/* <label id="contact-label" htmlFor="message">
-                Message:
-              </label> */}
               <textarea
                 placeholder="PLEASE WRITE MESSAGE HERE"
                 value={message}
@@ -95,7 +85,6 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      {/* <video className="city" src={City} autoPlay loop muted /> */}
     </div>
   );
 };

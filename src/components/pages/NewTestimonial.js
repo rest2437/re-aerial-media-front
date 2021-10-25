@@ -30,7 +30,7 @@ const NewTestimonial = () => {
       })
       .catch((error) => console.log("===> Error Adding a new post", error));
   };
-  if (redirect) return <Redirect to="/Testimonials" />; // You can have them redirected to profile (your choice)
+  if (redirect) return <Redirect to="/Testimonials" />;
 
   return (
     <div className="test-container">

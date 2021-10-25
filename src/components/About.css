@@ -45,16 +45,12 @@
 .automotive-services {
   width: 25vw;
   height: 30vw;
-  /* border: 2px solid white; */
-  /* background-color: black; */
   background: linear-gradient(to left, #000000 0%, #000000 90%, #ffffff 100%);
 }
 .realstate-services {
   width: 22vw;
   height: 30vw;
-  /* border: 2px solid white; */
   background-color: white;
-  /* background: linear-gradient(to left, #ffffff 0%, #ffffff 90%, #000000 100%); */
 }
 
 .realstate-title-services {
@@ -70,13 +66,11 @@
   align-items: center;
 }
 .automotive-about-content {
-  /* width: 40vw; */
   font-size: 0.8vw;
   color: white;
   text-align: center;
 }
 .realstate-about-content {
-  /* width: 40vw; */
   font-size: 0.8vw;
   color: black;
   text-align: center;

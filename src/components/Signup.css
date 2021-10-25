@@ -2,9 +2,6 @@
   height: 55vw;
   background-image: url(./images/smoke.jpeg);
   background-size: cover;
-
-  /* border: 2px solid white; */
-  /* background-color: pink; */
 }
 #signup-form-container {
   padding-top: 3vw;
