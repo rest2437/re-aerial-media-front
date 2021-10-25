@@ -96,3 +96,13 @@ const handleSubmit = (e) => {
 - In your main file directory, create a .env file and input the following: "MONGO_URI=mongodb://localhost:27017/reaerialmedia". on the second line, input the following: "JWT_SECRET=putwhateveryoudesirehere"
 - In your terminal, run "npm install" to install all dependencies
 - next, run "npm run start"
+
+---
+
+## Stretch Goals
+
+- Nodemailer stopped working on production, I need to figure out an alternative for this.
+- The User will be able to delete only their reviews, not others.
+- The User will have projects available to be downloaded in their own profile under a (My projects) tab.
+- The User will be able to upload photos with their reviews.
+- The User will be able to pay through the site.
