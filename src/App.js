@@ -14,7 +14,6 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Testimonials from "./components/pages/Testimonials";
 import axios from "axios";
-
 import "./App.css";
 
 const { REACT_APP_SERVER_URL } = process.env;
