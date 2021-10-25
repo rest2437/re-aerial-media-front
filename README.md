@@ -1,209 +1,98 @@
-# MERN Authentication Frontend
+# RE Aerial Media
 
-| Components | Links to Code | Description |
-| --- | --- | --- |
-| `App`| [`App`](https://github.com/SEI802/mern-auth-frontend#app-component) | The component that manages the entire app |
-| `Signup`| [`Signup`](https://github.com/SEI802/mern-auth-frontend/blob/main/docs/signup.md) | Allow the user to signup |
-| `Login`| [`Login`](https://github.com/SEI802/mern-auth-frontend/blob/main/docs/login.md) | Allows the user to login to the app |
-| `Navbar`| [`Navbar`](https://github.com/SEI802/mern-auth-frontend/blob/main/docs/navbar.md) | Make `App` class component |
-| `Profile`| [`Profile`](#) | A component that displays the user profile information |
-| `setAuthToken`| [`setAuthToken`](https://github.com/SEI802/mern-auth-frontend/blob/main/docs/setAuthToken.md) | A utility function that adds a token to the `Authentication` header to manage current user |
-| `About`| [`About`](https://github.com/SEI802/mern-auth-frontend/blob/main/docs/other-components.md#about) | A component that decribes the app |
-| `Footer`| [`Footer`](https://github.com/SEI802/mern-auth-frontend/blob/main/docs/other-components.md#footer) | A footer that goes on each component |
-| `Welcome`| [`Welcome`](https://github.com/SEI802/mern-auth-frontend/blob/main/docs/other-components.md#welcome) | A welcome page for the user |
+---
 
-### `App` Component
+- This full stack application for RE Aerial Media is designed to assist in showcasing work to potential clients as well as providing them with testimonials and a contact page to inquire about products and services.
+- Users have the ability to email RE Aerial Media directly from the contact page.
+- Users have the ability of posting their own testimonials for everyone to see. Non users will not be able to post.
 
-### Imports for `App`
+---
 
-```jsx
-// Imports
-import React, { useEffect, useState } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import jwt_decode from 'jwt-decode';
-import setAuthToken from './utils/setAuthToken';
+## Languages & Dependencies
 
-// CSS
-import './App.css';
+---
 
-// Components
-import Signup from './components/Signup';
-import About from './components/About';
-import Footer from './components/Footer';
-import Login from './components/Login';
-import Navbar from './components/Navbar';
-import Profile from './components/Profile';
-import Welcome from './components/Welcome';
+- ReactJS
+- Axios
+- Dotenv
+- Framer-motion
+- Jwt-decode
+- Nodemailer
+- React-dom
+- React-scripts
+- Styled-components
+
+---
+
+## Other programs used
+
+---
+
+- Adobe Photoshop (to create Logos)
+- SVG converter tool
+
+---
+
+## Code snippets I am proud of:
+
+---
+
+This code Gives the User a new token to allow users to view their updated profile info. without this code, the User must log out and log back in to view any changes.
+
+```js
+const updateUser = (e) => {
+  axios
+    .get(`${REACT_APP_SERVER_URL}/users/token`)
+    .then((response) => {
+      const { token } = response.data;
+      localStorage.setItem("jwtToken", token);
+      setAuthToken(token);
+    })
+    .catch((error) => {
+      console.log("===> Error on login", error);
+    });
+};
 ```
 
-### `useState` inside `App`
+After creating the function, it was called inside of the Update container within the handleSubmit function.
 
-```jsx
-function App() {
-  // Set state values
-  const [currentUser, setCurrentUser] = useState('');
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
-}
+```js
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const userData = { name, email };
+
+  axios
+    .put(`${REACT_APP_SERVER_URL}/users/update/${props.id}`, userData)
+    .then((response) => {
+      console.log(response);
+      props.updateUser();
+    })
+    .catch((error) => {
+      console.log("===> Error on login", error);
+    });
+};
 ```
 
-### `PrivateRoute`
+---
 
-```jsx
-const PrivateRoute = ({ component: Component, ...rest}) => {
-  let token = localStorage.getItem('jwtToken');
-  console.log('===> Hitting a Private Route');
-  return <Route {...rest} render={(props) => {
-    return token ? <Component {...rest} {...props} /> : <Redirect to="/login"/>
-  }} />
-}
-```
+## To install this app:
 
-### `useEffect` inside `App`
+---
 
-```jsx
-useEffect(() => {
-    let token;
+### Front-end:
 
-    if (!localStorage.getItem('jwtToken')) {
-      setIsAuthenticated(false);
-      console.log('====> Authenticated is now FALSE');
-    } else {
-      token = jwt_decode(localStorage.getItem('jwtToken'));
-      setAuthToken(localStorage.getItem('jwtToken'));
-      setCurrentUser(token);
-    }
-  }, []);
-```
+- Please for and clone here https://github.com/rest2437/re-aerial-media-front
+- Once cloned, open in your favorite editor.
+- In your main file directory, create a .env file and input the following: "REACT_APP_SERVER_URL=https://localhost:8000"
+- In your terminal, run "npm install" to install all dependencies
+- next, run "npm start"
 
-### `nowCurrentUser`
+---
 
-```jsx
-const nowCurrentUser = (userData) => {
-    console.log('===> nowCurrentUser is here.');
-    setCurrentUser(userData);
-    setIsAuthenticated(true);
-}
-```
+### Back-end:
 
-### `handleLogout`
-
-```jsx
-const handleLogout = () => {
-    if (localStorage.getItem('jwtToken')) {
-        // remove token for localStorage
-        localStorage.removeItem('jwtToken');
-        setCurrentUser(null);
-        setIsAuthenticated(false);
-    }
-}
-```
-
-### `return` of `App`
-
-```jsx
-return (
-<div className="App">
-    <h1>MERN Authentication</h1>
-    <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
-    <div className="container mt-5">
-        <Switch>
-            <Route path='/signup' component={Signup} />
-            <Route 
-            path="/login"
-            render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>}
-            />
-            <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
-            <Route exact path="/" component={Welcome} />
-            <Route path="/about" component={About} />
-        </Switch>
-    </div>
-    <Footer />
-</div>
-);
-```
-
-### Finished
-
-```jsx
-// Imports
-import React, { useEffect, useState } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import jwt_decode from 'jwt-decode';
-import setAuthToken from './utils/setAuthToken';
-
-// CSS
-import './App.css';
-
-// Components
-import Signup from './components/Signup';
-import About from './components/About';
-import Footer from './components/Footer';
-import Login from './components/Login';
-import Navbar from './components/Navbar';
-import Profile from './components/Profile';
-import Welcome from './components/Welcome';
-
-const PrivateRoute = ({ component: Component, ...rest}) => {
-  let token = localStorage.getItem('jwtToken');
-  console.log('===> Hitting a Private Route');
-  return <Route {...rest} render={(props) => {
-    return token ? <Component {...rest} {...props} /> : <Redirect to="/login"/>
-  }} />
-}
-
-function App() {
-  // Set state values
-  const [currentUser, setCurrentUser] = useState('');
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
-
- 
-  useEffect(() => {
-    let token;
-
-    if (!localStorage.getItem('jwtToken')) {
-      setIsAuthenticated(false);
-      console.log('====> Authenticated is now FALSE');
-    } else {
-      token = jwt_decode(localStorage.getItem('jwtToken'));
-      setAuthToken(localStorage.getItem('jwtToken'));
-      setCurrentUser(token);
-    }
-  }, []);
-
-  const nowCurrentUser = (userData) => {
-    console.log('===> nowCurrent is here.');
-    setCurrentUser(userData);
-    setIsAuthenticated(true);
-  }
-
-  const handleLogout = () => {
-    if (localStorage.getItem('jwtToken')) {
-      // remove token for localStorage
-      localStorage.removeItem('jwtToken');
-      setCurrentUser(null);
-      setIsAuthenticated(false);
-    }
-  }
-
-  return (
-    <div className="App">
-      <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
-      <div className="container mt-5">
-        <Switch>
-          <Route path='/signup' component={Signup} />
-          <Route 
-            path="/login"
-            render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>}
-          />
-          <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
-          <Route exact path="/" component={Welcome} />
-          <Route path="/about" component={About} />
-        </Switch>
-      </div>
-      <Footer />
-    </div>
-  );
-}
-
-export default App;
-```
+- Please for and clone here https://github.com/rest2437/re-aerial-media-backend
+- Once cloned, open in your favorite editor.
+- In your main file directory, create a .env file and input the following: "MONGO_URI=mongodb://localhost:27017/reaerialmedia". on the second line, input the following: "JWT_SECRET=putwhateveryoudesirehere"
+- In your terminal, run "npm install" to install all dependencies
+- next, run "npm run start"
