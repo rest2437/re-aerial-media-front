@@ -25,7 +25,7 @@ const Contact = () => {
 
     const details = { name, email, message };
 
-    let response = await fetch("http://localhost:8000/contact", {
+    let response = await fetch(`${REACT_APP_SERVER_URL}/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
