@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import Peytan from "../images/peytan.jpg";
+const { REACT_APP_SERVER_URL } = process.env;
 
 const Contact = () => {
   const [status, setStatus] = useState("Submit");
