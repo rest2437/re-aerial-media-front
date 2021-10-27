@@ -1,25 +1,25 @@
 import React from "react";
-import "./Realstate.css";
-import Real1 from "../images/realstate/real1.jpg";
-import Real2 from "../images/realstate/real2.jpg";
-import Real3 from "../images/realstate/real3.jpg";
-import Real4 from "../images/realstate/real4.jpg";
-import Real5 from "../images/realstate/real5.jpg";
-import Real6 from "../images/realstate/real6.jpg";
-import Real7 from "../images/realstate/real7.jpg";
-import Real8 from "../images/realstate/real8.jpg";
-import Real9 from "../images/realstate/real9.jpg";
-import Real10 from "../images/realstate/real10.jpg";
+import "./RealEstate.css";
+import Real1 from "../images/realEstate/real1.jpg";
+import Real2 from "../images/realEstate/real2.jpg";
+import Real3 from "../images/realEstate/real3.jpg";
+import Real4 from "../images/realEstate/real4.jpg";
+import Real5 from "../images/realEstate/real5.jpg";
+import Real6 from "../images/realEstate/real6.jpg";
+import Real7 from "../images/realEstate/real7.jpg";
+import Real8 from "../images/realEstate/real8.jpg";
+import Real9 from "../images/realEstate/real9.jpg";
+import Real10 from "../images/realEstate/real10.jpg";
 
-function Realstate() {
+function RealEstate() {
   return (
     <div className="realstate-container">
       <div id="realstate-header">
-        <h1>Realstate Photography</h1>
+        <h1>Real Estate Photography</h1>
       </div>
       <div id="realstate-disc">
         <h2>
-          The main advantage of hiring an aerial photographer for Realstate is
+          The main advantage of hiring an aerial photographer for Real Estate is
           that you can show property size and unique angles of the home and lot
           that you wouldnt normally be able to see or explain to the customer.
           And lets not forget... its pretty cool to see photos of anything from
@@ -70,4 +70,4 @@ function Realstate() {
   );
 }
 
-export default Realstate;
+export default RealEstate;

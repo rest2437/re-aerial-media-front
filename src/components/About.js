@@ -13,7 +13,7 @@ const About = () => {
         </div>
         <div className="about-content">
           <p>
-            RE Aerial Media started out doing only Realstate photo shoots. We
+            RE Aerial Media started out doing only Real Estate photo shoots. We
             only offered Aerial view photos of the homes and property. Since
             then we have expanded our hardware and are capable of doing 360 view
             walkthroughs, photo editing, videography, high resolution photos and
@@ -31,7 +31,7 @@ const About = () => {
           <div className="realstate-services">
             <div className="realstate-about-sub-title">
               <p>
-                <h2>Realstate Services </h2>
+                <h2>Real Estate Services </h2>
               </p>
             </div>
             <div className="realstate-about-content">

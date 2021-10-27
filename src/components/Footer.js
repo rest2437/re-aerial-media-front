@@ -43,7 +43,7 @@ function Footer() {
           <div className="footer-link-items">
             <h2>Videos</h2>
             <Link to="/">Automotive projects</Link>
-            <Link to="/">Realstate projects</Link>
+            <Link to="/">Real Estate projects</Link>
           </div>
           <div className="footer-link-items">
             <h2>Social Media</h2>

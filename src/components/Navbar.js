@@ -30,11 +30,11 @@ const Navbar = (props) => {
                 </li>
                 <li className="nav-item">
                   <Link
-                    to="/Realstate"
+                    to="/RealEstate"
                     className="nav-links"
                     onClick={closeMobileMenu}
                   >
-                    Realstate
+                    Real Estate
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -74,11 +74,11 @@ const Navbar = (props) => {
               </li>
               <li className="nav-item">
                 <Link
-                  to="/Realstate"
+                  to="/RealEstate"
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
-                  Realstate
+                  Real Estate
                 </Link>
               </li>
               <Link to="/Login">
